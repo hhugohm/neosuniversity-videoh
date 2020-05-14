@@ -1,4 +1,4 @@
-# neosuniversity-videoh Appication
+# Neosuniversity-video using Hibernate 5.x Appication
 
 Steps
 
