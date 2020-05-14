@@ -13,7 +13,7 @@ public class InsertUser {
 			session.getTransaction().begin();
 
 			UserLogin user = new UserLogin();
-			user.setUserName("hhugohm");
+			user.setUsername("hhugohm");
 			user.setEmail("hhugohm@gmail.com");
 			user.setPassword("mypass");
 			user.setEnabled(false);

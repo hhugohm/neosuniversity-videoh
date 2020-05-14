@@ -16,20 +16,19 @@ public class AuthorityId implements Serializable {
 	
 	
 	
-	@Column(name="USER_NAME")
-	private String userName;
+	@Column(name = "USER_NAME", length = 50, nullable = false)
+	private String username;
 	
-	@Column(name="ID_AUTHORITY")
+	@Column(name="ID_AUTHORITY", length = 100, nullable = false)
 	private String authority;
 
-
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 
@@ -45,7 +44,7 @@ public class AuthorityId implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "AuthorityId [userName=" + userName + ", authority=" + authority + "]";
+		return "AuthorityId [username=" + username + ", authority=" + authority + "]";
 	}
 
 
@@ -54,13 +53,13 @@ public class AuthorityId implements Serializable {
         if (this == o) return true;
         if (!(o instanceof AuthorityId)) return false;
         AuthorityId that = (AuthorityId) o;
-        return Objects.equals(getUserName(), that.getUserName()) &&
+        return Objects.equals(getUsername(), that.getUsername()) &&
                 Objects.equals(getAuthority(), that.getAuthority());
     }
 	
 	@Override
     public int hashCode() {
-        return Objects.hash(getUserName(), getAuthority());
+        return Objects.hash(getUsername(), getAuthority());
     }
 
 }

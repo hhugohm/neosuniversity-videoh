@@ -14,20 +14,20 @@ public class InsertMix {
 		session.getTransaction().begin();
 
 		UserLogin user = new UserLogin();
-		user.setUserName("hhugohm");
+		user.setUsername("hhugohm");
 		user.setEmail("hhugohm@gmail.com");
 		user.setPassword("mypass");
 		user.setEnabled(false);
 		
 		UserInformation userInfo = new UserInformation();
-		userInfo.setUserName(user.getUserName());
+		userInfo.setUserName(user.getUsername());
 		userInfo.setAge(20);
 		userInfo.setName("hugo");
 		userInfo.setLastname("hidalgo");
 		
 		Authority authority= new Authority();
 		AuthorityId authorityId = new AuthorityId();
-		authorityId.setUserName(user.getUserName());
+		authorityId.setUsername(user.getUsername());
 		authorityId.setAuthority("ADMIN");
 		authority.setAuthorityId(authorityId);
 		//authority.setUserName(user.getUserName());

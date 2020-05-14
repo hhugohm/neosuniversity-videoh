@@ -14,48 +14,46 @@ import javax.persistence.Table;
  * 
  * @author hhugohm
  * 
- * USER Entity that store information by login
+ *         USER Entity that store information by login
  *
  */
 @Entity
-@Table(name="USERS",schema="VIDEODB")
+@Table(name = "USERS", schema = "VIDEODB")
 public class UserLogin {
-	
-	@Id
-	@Column(name="USER_NAME",length=50,nullable=false)
-	private String userName;
 
-	@OneToOne(cascade=CascadeType.ALL ,fetch=FetchType.EAGER)
-	@JoinColumn(name="USER_NAME")
+	@Id
+	@Column(name = "USER_NAME", length = 50, nullable = false)
+	private String username;
+
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name = "USER_NAME")
 	private UserInformation userInfo;
-	
-	@OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-	@JoinColumns({
-        @JoinColumn(
-            name = "userName",
-            referencedColumnName = "USER_NAME" ,updatable = false, insertable = false),
-        @JoinColumn(
-            name = "ID_AUTHORITY",
-           referencedColumnName = "ID_AUTHORITY",updatable = true, insertable = true)
-    })
-	//@JoinColumn(name="authorityId")
+
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumns(
+	{ 
+	@JoinColumn(name = "username", referencedColumnName = "USER_NAME"),
+	@JoinColumn(name = "authority", referencedColumnName = "ID_AUTHORITY")
+	})
 	private Authority authority;
-	
-	@Column(name="EMAIL",length=50,nullable=true)
+
+	@Column(name = "EMAIL", length = 50, nullable = true)
 	private String email;
-	
-	@Column(name="PASSWORD",length=256,nullable=false)
+
+	@Column(name = "PASSWORD", length = 256, nullable = false)
 	private String password;
-	
-	@Column(name="ENABLED",length=1,nullable=false)
+
+	@Column(name = "ENABLED", length = 1, nullable = false)
 	private boolean enabled;
 
-	public String getUserName() {
-		return userName;
+	
+
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getEmail() {
@@ -89,7 +87,6 @@ public class UserLogin {
 	public void setUserInfo(UserInformation userInfo) {
 		this.userInfo = userInfo;
 	}
-	
 
 	public Authority getAuthority() {
 		return authority;
@@ -101,16 +98,11 @@ public class UserLogin {
 
 	@Override
 	public String toString() {
-		return "UserLogin [userName=" + userName + ", userInfo=" + userInfo + ", authority=" + authority + ", email="
+		return "UserLogin [username=" + username + ", userInfo=" + userInfo + ", authority=" + authority + ", email="
 				+ email + ", password=" + password + ", enabled=" + enabled + "]";
 	}
 
-	
-
-	
-	
-	
-	//cuando es ID String
-	//@GeneratedValue(generator="system-uuid")
-	//@GenericGenerator(name="system-uuid", strategy = "uuid")
+	// cuando es ID String
+	// @GeneratedValue(generator="system-uuid")
+	// @GenericGenerator(name="system-uuid", strategy = "uuid")
 }

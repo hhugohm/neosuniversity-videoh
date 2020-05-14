@@ -1,9 +1,7 @@
 package com.neosuniversity.video.entities;
 
-import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -26,46 +24,6 @@ public class Authority {
 	public String toString() {
 		return "Authority [authorityId=" + authorityId + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	/*
-	@Id
-	@Column(name="USER_NAME",length=50,nullable=false,unique=true)
-	private String userName;
-	
-	
-	private String authority;
 
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getAuthority() {
-		return authority;
-	}
-
-
-
-	public void setAuthority(String authority) {
-		this.authority = authority;
-	}
-
-	@Override
-	public String toString() {
-		return "Authority [userName=" + userName + ", authority=" + authority + "]";
-	}
-	
-	
-	*/
 
 }

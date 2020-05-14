@@ -14,7 +14,7 @@ public class InsertUserInfo {
 
 			UserLogin dbUser = (UserLogin) session.get(UserLogin.class, "hhugohm");
 			UserInformation userInfo = new UserInformation();
-			userInfo.setUserName(dbUser.getUserName());
+			userInfo.setUserName(dbUser.getUsername());
 			userInfo.setAge(20);
 			userInfo.setName("hugo");
 			userInfo.setLastname("hidalgo");
