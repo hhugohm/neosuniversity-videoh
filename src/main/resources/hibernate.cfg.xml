@@ -24,6 +24,13 @@
         <mapping class="com.neosuniversity.video.entities.UserLogin"/>
         <mapping class="com.neosuniversity.video.entities.UserInformation"/>
         <mapping class="com.neosuniversity.video.entities.Authority"/>
+        <mapping class="com.neosuniversity.video.entities.Movie"/>
+        <mapping class="com.neosuniversity.video.entities.Chapter"/>
+        <mapping class="com.neosuniversity.video.entities.Actor"/>
+        <mapping class="com.neosuniversity.video.entities.Country"/>
+        <mapping class="com.neosuniversity.video.entities.Season"/>
+        <mapping class="com.neosuniversity.video.entities.TypeMovie"/>
+        
         
         
         
