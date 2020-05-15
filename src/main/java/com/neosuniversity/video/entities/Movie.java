@@ -2,7 +2,9 @@ package com.neosuniversity.video.entities;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,6 +14,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -34,6 +38,13 @@ public class Movie {
 	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name = "ID_TYPE_MOVIE")
 	private TypeMovie typemovie;
+	
+	
+	@ManyToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="MOVIE_ACTOR",joinColumns=@JoinColumn(name="ID_MOVIE"),
+	inverseJoinColumns=@JoinColumn(name="ID_ACTOR"))
+	private Set<Actor> actors = new HashSet<>();
+	
 	
 	@Column(name="TITLE",length=200,nullable=false)
 	private String title;
@@ -109,5 +120,15 @@ public class Movie {
 		this.typemovie = typemovie;
 	}
 
+	public Set<Actor> getActors() {
+		return actors;
+	}
+
+	public void setActors(Set<Actor> actors) {
+		this.actors = actors;
+	}
+
+	
+	
 
 }

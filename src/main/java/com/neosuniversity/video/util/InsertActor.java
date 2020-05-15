@@ -22,6 +22,7 @@ public class InsertActor {
 		actor.setCountry(country);
 		
 		session.save(actor);
+		
 		session.getTransaction().commit();
 		HibernateUtil.shutdown();
 
