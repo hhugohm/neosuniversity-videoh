@@ -20,6 +20,15 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+
+/**
+ * 
+ * @author hhugohm
+ * 
+ *         MOVIE Entity that store information <br>
+ *         related  title, sinopsys, etc
+ *
+ */
 @Entity
 @Table(name="MOVIE",schema="VIDEODB")
 public class Movie {

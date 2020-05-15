@@ -4,6 +4,15 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+
+/**
+ * 
+ * @author hhugohm
+ * 
+ *         AUTHORITIES Entity that store information <br>
+ *         related security
+ *
+ */
 @Entity
 @Table(name="AUTHORITIES",schema="VIDEODB")
 public class Authority {

@@ -13,6 +13,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
+/**
+ * 
+ * @author hhugohm
+ * 
+ *         SEASON Entity that store information <br>
+ *         related  type of season
+ *
+ */
 @Entity
 @Table(name="SEASON",schema="VIDEODB")
 public class Season {

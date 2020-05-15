@@ -9,6 +9,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/**
+ * 
+ * @author hhugohm
+ * 
+ *         CHAPTER Entity that store information <br>
+ *         related  title, duration etc
+ *
+ */
 @Entity
 @Table(name="CHAPTER",schema="VIDEODB")
 public class Chapter {

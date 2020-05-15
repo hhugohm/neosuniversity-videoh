@@ -6,6 +6,14 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+/**
+ * 
+ * @author hhugohm
+ * 
+ *         AuthorityId Entity that store information <br>
+ *         related Data Base Primary Key
+ *
+ */
 @Embeddable
 public class AuthorityId implements Serializable {
 

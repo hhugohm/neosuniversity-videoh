@@ -7,6 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/**
+ * 
+ * @author hhugohm
+ * 
+ *         COUNTRY Entity that store information <br>
+ *         related  catalog country
+ *
+ */
 @Entity
 @Table(name="COUNTRY",schema="VIDEODB")
 public class Country {

@@ -11,7 +11,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
+/**
+ * 
+ * @author hhugohm
+ * 
+ *         ACTOR Entity that store information <br>
+ *         related name, etc
+ *
+ */
 @Entity
 @Table(name="ACTOR",schema="VIDEODB")
 public class Actor {

@@ -7,6 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
+/**
+ * 
+ * @author hhugohm
+ * 
+ *         TYPE_MOVIE Entity that store information <br>
+ *         related  type of Movies
+ *
+ */
 @Entity
 @Table(name="TYPE_MOVIE",schema="VIDEODB")
 public class TypeMovie {
